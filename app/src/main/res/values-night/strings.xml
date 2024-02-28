@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="edittext">EditText</string>
+    <string name="seekbar">SeekBar</string>
+    <string name="widgets_portal">Widgets Portal</string>
+    <string name="textview">TextView</string>
+</resources>

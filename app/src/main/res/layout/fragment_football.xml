@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Football">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#83CCCC"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Sergio Ramos\nCristiano Ronaldo\nLionel Messi\nLuka Modric\nZinadine Zidane"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        android:textColor="#2F2B55"
+        android:textSize="24sp" />
+
+</FrameLayout>
