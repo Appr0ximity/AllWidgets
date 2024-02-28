@@ -1,14 +1,15 @@
 package com.example.allviews;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
-
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import java.text.DateFormat;
 import java.util.Calendar;
@@ -21,6 +22,15 @@ public class DatePickerActivity extends AppCompatActivity implements DatePickerD
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_date_picker);
+
+        Button button1 = (Button) findViewById(R.id.homeButton);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DatePickerActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
         Button button = (Button) findViewById(R.id.dateButton);
         text = (TextView)findViewById(R.id.dateTextView);
 
