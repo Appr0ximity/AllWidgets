@@ -1,7 +1,5 @@
 package com.example.allviews;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,6 +10,8 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SpinnerActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -33,8 +33,8 @@ public class SpinnerActivity extends AppCompatActivity implements AdapterView.On
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SpinnerActivity.this, MainActivity.class);
-                startActivity(intent);
+                Intent i = new Intent(SpinnerActivity.this, MainActivity.class);
+                startActivity(i);
             }
         });
 

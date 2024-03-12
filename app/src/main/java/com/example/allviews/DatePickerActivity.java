@@ -13,6 +13,7 @@ import androidx.fragment.app.DialogFragment;
 
 import java.text.DateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class DatePickerActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
@@ -27,8 +28,8 @@ public class DatePickerActivity extends AppCompatActivity implements DatePickerD
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DatePickerActivity.this, MainActivity.class);
-                startActivity(intent);
+                Intent i = new Intent(DatePickerActivity.this, MainActivity.class);
+                startActivity(i);
             }
         });
         Button button = (Button) findViewById(R.id.dateButton);

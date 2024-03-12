@@ -1,12 +1,12 @@
 package com.example.allviews;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToToolBarActivity(View v) {
         Intent i = new Intent(MainActivity.this, ToolBarActivity.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(i);
     }
 

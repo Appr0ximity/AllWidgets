@@ -17,8 +17,8 @@ public class ImageViewActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ImageViewActivity.this, MainActivity.class);
-                startActivity(intent);
+                Intent i = new Intent(ImageViewActivity.this, MainActivity.class);
+                startActivity(i);
             }
         });
     }

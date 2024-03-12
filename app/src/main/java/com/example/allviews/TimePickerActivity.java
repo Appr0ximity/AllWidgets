@@ -1,8 +1,5 @@
 package com.example.allviews;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
-
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TimePicker;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import java.util.Calendar;
 
@@ -27,8 +27,8 @@ public class TimePickerActivity extends AppCompatActivity implements TimePickerD
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TimePickerActivity.this, MainActivity.class);
-                startActivity(intent);
+                Intent i = new Intent(TimePickerActivity.this, MainActivity.class);
+                startActivity(i);
             }
         });
         button.setOnClickListener(new View.OnClickListener() {

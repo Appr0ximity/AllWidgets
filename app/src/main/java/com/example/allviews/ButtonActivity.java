@@ -18,8 +18,8 @@ public class ButtonActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ButtonActivity.this, MainActivity.class);
-                startActivity(intent);
+                Intent i = new Intent(ButtonActivity.this, MainActivity.class);
+                startActivity(i);
             }
         });
     }

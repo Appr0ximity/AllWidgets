@@ -15,7 +15,6 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
         switch (position){
-            case 0: return new Cricket();
             case 1: return  new Football();
             case 2: return new Tennis();
             default: return new Cricket();

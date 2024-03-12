@@ -1,14 +1,13 @@
 package com.example.allviews;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager2.widget.ViewPager2;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.android.material.tabs.TabItem;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
+
 import com.google.android.material.tabs.TabLayout;
 
 public class TabLayoutActivity extends AppCompatActivity {
@@ -24,8 +23,8 @@ public class TabLayoutActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TabLayoutActivity.this, MainActivity.class);
-                startActivity(intent);
+                Intent i = new Intent(TabLayoutActivity.this, MainActivity.class);
+                startActivity(i);
             }
         });
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);

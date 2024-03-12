@@ -52,6 +52,7 @@
             <Button
                 android:id="@+id/button"
                 style="@style/widgetButton"
+                android:layout_marginTop="32dp"
                 android:onClick="goToTextViewActivity"
                 android:text="@string/textview"
                 app:layout_constraintEnd_toEndOf="parent"
