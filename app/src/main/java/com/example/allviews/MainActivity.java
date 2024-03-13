@@ -102,4 +102,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void goToContactListViewActivity(View v) {
+        Intent i = new Intent(MainActivity.this, ContactListView.class);
+        startActivity(i);
+    }
+
 }
