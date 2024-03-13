@@ -7,8 +7,6 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -25,8 +23,7 @@ public class ContactListView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_list_view);
         ListView listView = findViewById(R.id.listView);
-        ArrayList<ContactData> list = new ArrayList<>();
-        list.addAll(getContacts());
+        ArrayList<ContactData> list = new ArrayList<>(getContacts());
         ContactAdapter contactAdapter = new ContactAdapter(this, list);
         listView.setAdapter(contactAdapter);
     }
@@ -56,14 +53,11 @@ public class ContactListView extends AppCompatActivity {
                             phoneNumber = phoneCursor.getString(phoneCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
                             contacts.add(new ContactData(name, phoneNumber));
                         }
-                        lv=(ListView) findViewById(R.id.listView);
+                        lv= findViewById(R.id.listView);
                         String finalPhoneNumber = phoneNumber;
-                        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                            @Override
-                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                                Intent i = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+ finalPhoneNumber));
-                                startActivity(i);
-                            }
+                        lv.setOnItemClickListener((parent, view, position, id1) -> {
+                            Intent i = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+ finalPhoneNumber));
+                            startActivity(i);
                         });
                         phoneCursor.close();
                     }
@@ -74,9 +68,6 @@ public class ContactListView extends AppCompatActivity {
         } else {
             Toast.makeText(this, "No contacts found!", Toast.LENGTH_SHORT).show();
         }
-
-
-
         return contacts;
 
     }

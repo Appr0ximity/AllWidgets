@@ -1,7 +1,6 @@
 package com.example.allviews;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -86,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         builder = new AlertDialog.Builder(MainActivity.this);
         builder.setMessage("This is an Alert Dialog").setTitle("Alert Dialog");
         builder.setCancelable(false);
-        builder.setPositiveButton("Understood!", (DialogInterface.OnClickListener)(dialog, which)-> dialog.cancel());
+        builder.setPositiveButton("Understood!", (dialog, which)-> dialog.cancel());
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
@@ -104,6 +103,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToContactListViewActivity(View v) {
         Intent i = new Intent(MainActivity.this, ContactListView.class);
+        startActivity(i);
+    }
+
+    public void goToContactRecyclerViewActivity(View v) {
+        Intent i = new Intent(MainActivity.this, ContactRecyclerView.class);
         startActivity(i);
     }
 
